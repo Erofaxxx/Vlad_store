@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Accessories Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">Apple Accessories</a>
+            <div class="nav-links">
+                <a href="#products">Товары</a>
+                <a href="cart.html">Корзина (<span id="cartCount">0</span>)</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Аксессуары для Apple</h1>
+            <p>Премиум качество для ваших устройств</p>
+        </div>
+    </header>
+
+    <section id="products" class="products-grid">
+        <!-- Товары будут добавлены через JavaScript -->
+    </section>
+
+    <div id="notification" class="notification" style="display: none;"></div>
+
+    <footer class="main-footer">
+        <p>© 2024 Apple Accessories Store. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script> 
+        window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        initializeCart(); // Переинициализируем корзину
+        renderProducts(); // Перерисовываем товары (если нужно)
+    }
+});
+
+</script>
+</body>
+</html>
